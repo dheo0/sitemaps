@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item *)",
+      "PowerShell(Get-ChildItem \"C:\\\\dev\\\\sitemaps\" -Exclude \"node_modules\" | ForEach-Object { $_.Name })",
+      "PowerShell(Get-Content *)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:12333/sitemap.xml\" -UseBasicParsing | Select-Object -ExpandProperty Content)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000/sitemap.xml\" -UseBasicParsing | Select-Object -ExpandProperty Content)",
+      "PowerShell(node -e \"console.log\\(require\\('C:/dev/sitemaps/node_modules/sitemap/package.json'\\).version\\)\")",
+      "PowerShell(node -e \"const sm = require\\('C:/dev/sitemaps/node_modules/sitemap'\\); console.log\\(Object.keys\\(sm\\)\\)\")",
+      "PowerShell(curl *)",
+      "Bash(curl -s \"http://localhost:3000/sc.xml\")",
+      "PowerShell(node -e \"const { join } = require\\('path'\\); console.log\\(JSON.stringify\\(join\\('https://example.com', '/'\\)\\)\\)\")",
+      "PowerShell(Start-Sleep -Seconds 8; \\(Invoke-WebRequest -Uri \"http://localhost:3000/data.xml\" -UseBasicParsing\\).Content)",
+      "PowerShell(Start-Sleep -Seconds 10; \\(Invoke-WebRequest -Uri \"http://localhost:3000/sc.xml\" -UseBasicParsing\\).Content)",
+      "PowerShell(Start-Sleep -Seconds 10; \\(Invoke-WebRequest -Uri \"http://localhost:3000/sc.xml\" -UseBasicParsing\\).Content; Write-Host \"---\"; \\(Invoke-WebRequest -Uri \"http://localhost:3000/bc.xml\" -UseBasicParsing\\).Content)",
+      "PowerShell(node \"C:\\\\dev\\\\sitemaps\\\\scripts\\\\set-deploy-date.js\")",
+      "Bash(git --version)",
+      "Bash(gh --version)",
+      "Bash(git config *)",
+      "PowerShell(git config *)"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "sitemaps",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "node scripts/set-deploy-date.js && nuxt build",
+    "start": "nuxt start",
+    "generate": "node scripts/set-deploy-date.js && nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0",
+    "nuxt": "^2.18.1",
+    "webpack": "^4.46.0"
+  }
+}
